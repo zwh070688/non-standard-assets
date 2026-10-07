@@ -21,7 +21,7 @@ if st.button("开始价格发现"):
             api_key=st.secrets.get("DEEPSEEK_API_KEY", "本地临时KEY"), 
             base_url="https://api.deepseek.com"
     )
-                b64 = base64.b64encode(uploaded_file.getvalue()).decode("utf-8")
+            b64 = base64.b64encode(uploaded_file.getvalue()).decode("utf-8")
             
             try:
                 # 1. AI 识别图片
