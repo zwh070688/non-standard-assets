@@ -17,7 +17,7 @@ if st.button("开始价格发现"):
     if uploaded_file is not None:
         with st.spinner("正在识别中，请稍候……"):
            # 优先从云端配置读取Key，本地测试则在下方配置
-client = OpenAI(
+    client = OpenAI(
     api_key=st.secrets.get("DEEPSEEK_API_KEY", "本地临时KEY"), 
     base_url="https://api.deepseek.com"
 )
