@@ -17,11 +17,11 @@ if st.button("开始价格发现"):
     if uploaded_file is not None:
         with st.spinner("正在识别中，请稍候……"):
            # 优先从云端配置读取Key，本地测试则在下方配置
-    client = OpenAI(
-    api_key=st.secrets.get("DEEPSEEK_API_KEY", "本地临时KEY"), 
-    base_url="https://api.deepseek.com"
-)
-            b64 = base64.b64encode(uploaded_file.getvalue()).decode("utf-8")
+            client = OpenAI(
+            api_key=st.secrets.get("DEEPSEEK_API_KEY", "本地临时KEY"), 
+            base_url="https://api.deepseek.com"
+    )
+                b64 = base64.b64encode(uploaded_file.getvalue()).decode("utf-8")
             
             try:
                 # 1. AI 识别图片
